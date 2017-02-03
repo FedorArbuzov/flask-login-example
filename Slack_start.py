@@ -4,6 +4,7 @@ from  time import sleep
 
 slack_client = SlackClient(bot_token)
 
+
 if slack_client.rtm_connect() == True:
     print('Connected.')
     while True:
