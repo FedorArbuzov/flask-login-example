@@ -4,26 +4,6 @@ from  time import sleep
 
 slack_client = SlackClient(bot_token)
 
-# print(slack_client.api_call('channels.list'))
-"""
-if slack_client.rtm_connect():
-    while True:
-        print(slack_client.rtm_read())
-        time.sleep(10)
-else:
-    print("Connection Failed, invalid token?")
-
-
-while True:
-  new_evts = sc.rtm_read()
-  for evt in new_evts:
-  print(evt)
-  if "type" in evt:
-    if evt["type"] == "message" and "text" in evt:
-      message=evt["text"]
-  time.sleep(3)
-"""
-
 if slack_client.rtm_connect() == True:
     print('Connected.')
     while True:
