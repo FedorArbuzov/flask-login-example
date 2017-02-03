@@ -9,6 +9,7 @@ if slack_client.rtm_connect() == True:
     print('Connected.')
     while True:
         response = slack_client.rtm_read()
+        print(slack_client.rtm_read())
         for part in response:
             if part['type'] == 'message' and 'user' in part:
                 slack_client.api_call("chat.postMessage", channel=part['channel'],
